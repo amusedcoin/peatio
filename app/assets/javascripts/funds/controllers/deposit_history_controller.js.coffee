@@ -3,7 +3,7 @@ app.controller 'DepositHistoryController', ($scope, $stateParams, $http) ->
   $scope.predicate = '-id'
   @currency = $stateParams.currency
   @account = Account.findBy('currency', @currency)
-  @deposits = @account.deposits().slice(0, 3)
+  @deposits = Deposit.findAllBy('currency',  @currency)
   @newRecord = (deposit) ->
     if deposit.aasm_state == "submitting" then true else false
 

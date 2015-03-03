@@ -23,6 +23,7 @@
           dl.dl-horizontal.dl-member
             = item_for @bank, :sn
             = item_for @bank, :amount
+            = item_for @bank, :currency
             = item_for @bank, :done_at
             - if @bank.may_submit? or @bank.may_accept?
               dt = t('.txid')

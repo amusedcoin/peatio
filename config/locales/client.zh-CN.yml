@@ -13,8 +13,28 @@ zh-CN:
       currency_name:
         cny: CNY
         btc: BTC
+        aud: AUD
       deposit_cny:
         title: 人民币充值
+        desc: "通过银行转账汇款的方式，经人工审核后充值人民币到您的交易账户中，流程如下："
+        desc_item_1: "1. 提交以下表单，获得转账识别码；"
+        desc_item_2: "2. 银行转账汇款到云币交易所开户行，务必在备注栏填写识别码；"
+        desc_item_3: "3. 人工审核汇款记录，确认后充值到您的云币账户。"
+        attention: "特别提醒：充值银行账户姓名必须与您的实名认证姓名一致。"
+        from: 汇款人
+        to: 收款人
+        deposit_name: 开户户名
+        deposit_account: 充值账号
+        add: 添加
+        manage: 管理
+        amount: 充值金额
+        min_amount: 最低金额100元
+        to_account: 收款账号
+        to_name: 收款账户
+        to_bank_name: 收款银行
+        opening_bank_name: 开户行
+      deposit_aud:
+        title: 澳币充值
         desc: "通过银行转账汇款的方式，经人工审核后充值人民币到您的交易账户中，流程如下："
         desc_item_1: "1. 提交以下表单，获得转账识别码；"
         desc_item_2: "2. 银行转账汇款到云币交易所开户行，务必在备注栏填写识别码；"
@@ -63,6 +83,19 @@ zh-CN:
         suspect: 异常
       withdraw_cny:
         title: 人民币提现
+        intro: 选择提现银行并输入帐号和提取金额，完成提交。
+        intro_2: 您提现的银行账户姓名必须和您实名认证的姓名一致。
+        attention: "提现服务时间：9:00 - 18:00 (18:00后的提现申请次日处理)"
+        account_name: 账户名
+        withdraw_address: 提现账号
+        balance: 可用余额
+        withdraw_amount: 提取数量
+        manage_withdraw: 管理提现账号
+        fee_explain: 资费说明
+        min: 最低
+        withdraw_all: 全部提取
+      withdraw_aud:
+        title: 澳元提现
         intro: 选择提现银行并输入帐号和提取金额，完成提交。
         intro_2: 您提现的银行账户姓名必须和您实名认证的姓名一致。
         attention: "提现服务时间：9:00 - 18:00 (18:00后的提现申请次日处理)"

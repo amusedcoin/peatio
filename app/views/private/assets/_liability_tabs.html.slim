@@ -19,3 +19,11 @@
           == t("currency.icon.cny")
           = @cny_proof.sum
       = render 'liability_data', account: @cny_account, proof: @cny_proof
+    
+    #cny-proof.tab-pane:        .trade-wrapper
+      .assets
+        span.title = t('.cny-assets-total')
+        span.currency
+          == t("currency.icon.cny")
+          = @cny_proof.sum
+      = render 'liability_data', account: @cny_account, proof: @cny_proof

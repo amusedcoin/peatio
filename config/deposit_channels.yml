@@ -14,3 +14,23 @@
       branch: 'Your Bank Branch'
       holder: 'Your Account Holder'
       account: 'Your Account Number'
+- id: 600
+  key: bank
+  currency: aud
+  sort_order: 3
+  bank_accounts:
+    -
+      bank: 'Commonwealth Bank of Australia'
+      address: '1017 9468'
+      password: ''
+      tel: ''
+    -
+      bank: 'National Australia Bank'
+      address: '84083 0541'
+      password: ''
+      tel: ''
+    -
+      bank: 'Bank of Melbourne'
+      address: '439518279'
+      password: ''
+      tel: ''

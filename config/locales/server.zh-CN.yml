@@ -291,14 +291,21 @@ zh-CN:
     pab: 平安银行
     gdb: 广东发展银行
     psbc: 中国邮政储蓄银行
+    cb: commenwealth bank
   market:
     currency:
+      aud: AUD
       btc: BTC
       cny: CNY
       doge: DOGE
       pts: PTS
       ltc: LTC
   currency:
+    dollar:
+      key: AUD
+      code: AUD
+      name: 澳元
+      format: '0,0.00'
     satoshi:
       key: BTC
       code: BTC

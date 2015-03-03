@@ -1,0 +1,32 @@
+注释
+admin/base_controller.rb
+
+改动
+充值
+
+public/tempalates/funds/deposit_aud.html 添加页面
+public/tempalates/funds/deposit.html 添加页面
+
+config/locales/client.zh-CN.yml 改内容和银行
+config/locales/sercer.zh-CN.yml 改货币
+
+config/banks.yml 加银行
+
+controllers/concerns/deposits/ctrl_bankable.rb 注释 fetch方法参数更改
+
+views/admin/deposits/banks/show.html.slim 加入货币单位
+
+app/javascripts/funds/controllers/deposit_history_controller.js.coffee 改@deposits
+
+提现
+
+public/tempalates/funds/withdraw_aud.html 添加页面
+public/tempalates/funds/withdraw.html 添加页面
+
+config/locales/client.zh-CN.yml 改内容和银行
+
+controllers/concerns/withdraws/withdrawable.rb 注释
+
+
+问题
+1，澳元无法提现，出现异常

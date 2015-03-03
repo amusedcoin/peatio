@@ -58,7 +58,7 @@
     <td><span class="outlined-label">{{deposit.id}}</span></td>
     <td>{{deposit.created_at | date:'yyyy-MM-dd HH:mm' }}</td>
     <td>{{deposit.fund_extra}} @ {{deposit.fund_uid}}</td>
-    <td>{{deposit.amount}}</td>
+    <td>{{deposit.amount}}{{deposit.currency}}</td>
     <td>{{"funds.deposit_history." + deposit.aasm_state | t}}
       <span ng-if="dhCtrl.canCancel(deposit.aasm_state)">/
         <a ng-click="dhCtrl.cancelDeposit(deposit); $event.preventDefault()" href="#" class="cancel_link">{{ "funds.deposit_history.cancel" | t }}</a>

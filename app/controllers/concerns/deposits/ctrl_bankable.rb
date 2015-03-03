@@ -25,14 +25,14 @@ module Deposits
     private
 
     def fetch
-      @account = current_user.get_account(channel.currency)
+      @account = current_user.get_account(params[:deposit][:currency])
       @model = model_kls
-      @fund_sources = current_user.fund_sources.with_currency(channel.currency)
+      @fund_sources = current_user.fund_sources.with_currency(params[:deposit][:currency])
       @assets = model_kls.where(member: current_user).order(:id).reverse_order.limit(10)
     end
 
     def deposit_params
-      params[:deposit][:currency] = channel.currency
+      #params[:deposit][:currency] = channel.currency
       params[:deposit][:member_id] = current_user.id
       params[:deposit][:account_id] = @account.id
       params.require(:deposit).permit(:fund_source, :amount, :currency, :account_id, :member_id)
