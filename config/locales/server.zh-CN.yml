@@ -912,7 +912,7 @@ zh-CN:
           go: 设置
         phone_number:
           title: 手机绑定
-          description: 绑定手机号码，让你在貔貅交易所的资金更安全，您可以即时收到在网站操作的动态提醒并及时监控账号安全。
+          description: 绑定手机号码，让您的资金更安全，您可以即时收到在网站操作的动态提醒并及时监控账号安全。
           go: 设置
           verified: 已验证
           hint: "绑定号码 %{hint}"
@@ -941,7 +941,7 @@ zh-CN:
           go: 设置
         weibo:
           title: 绑定微博
-          description: 绑定微博后你可以通过微博进行登录, 而无需每次都输入账号密码.
+          description: 绑定微博后您可以通过微博进行登录, 而无需每次都输入账号密码.
           bound_desc: 此账号已经与 %{nickname} 绑定
           bind: 绑定
           unbind: 解除绑定
@@ -974,7 +974,7 @@ zh-CN:
         panel: API密钥
         index:
           title: 我的API密钥
-          intro: 貔貅交易所为您提供了功能完备,高性能的自动化交易API, 通过API您能够得到当前市场行情, 建立买单卖单, 查询自己的委托及成交记录, 查询账户余额及个人信息.
+          intro: 我们为您提供了功能完备，高性能的自动化交易API，通过API您能够得到当前市场行情，建立买单卖单，查询自己的委托及成交记录，查询账户余额及个人信息。
         new:
           title: 创建新密钥
         create:
@@ -1029,7 +1029,7 @@ zh-CN:
       panel: 创建账户
       new:
         title: 创建我的账户
-        intro: 这将是您在貔貅交易所使用各项服务所需要的用户名，例如交易购买、转账、提币、提现等，为了您的账户安全，尽量避免不安全的因素，请您填写完整。
+        intro: 这将是您的各项服务所需要的用户名，例如交易购买、转账、提币、提现等，为了您的账户安全，尽量避免不安全的因素，请您填写完整。
       edit:
         panel: 我的账户
         title: 修改密码
@@ -1389,6 +1389,7 @@ zh-CN:
       subject: "[ACX] 用户回复了服务单"
       notification_content: 用户 %{email} 回复了服务单，详情请查看链接：
     user_notification:
+<<<<<<< HEAD
       subject: "[ACX] 你的服务单有了新的回复"
       notification_content: '你的服务单有一条新的回复, 请在下方链接查看详情：'
   deposit_mailer:
@@ -1399,6 +1400,18 @@ zh-CN:
     notify_signin:
       subject: "[ACX] 您刚刚成功登录了貔貅交易所"
       just_signed_in: 您刚刚成功登录了貔貅交易所。
+=======
+      subject: "[PEATIO] 您的服务单有了新的回复"
+      notification_content: '您的服务单有一条新的回复, 请在下方链接查看详情：'
+  deposit_mailer:
+    deposit_accepted:
+      subject: "[貔貅] 您的充值已经到账"
+      content: 您的 %{currency} 已经到账.
+  member_mailer:
+    notify_signin:
+      subject: "[PEATIO] 您刚刚成功登录"
+      just_signed_in: 您刚刚成功登录了。
+>>>>>>> a357072587813b35b16fc309397edd55e40756a9
     google_auth_activated:
       subject: "[ACX] 绑定谷歌两步验证"
       google_auth_activated: 您已绑定谷歌两步验证。
@@ -1490,10 +1503,10 @@ zh-CN:
       short: "%m-%d %H:%M"
       default: "%Y-%m-%d %H:%M"
   sms:
-    verification_code: '验证码为：%{code}，30分钟内有效。（提示：工作人员不会索要，切勿泄露！）【貔貅交易所（北京）】'
-    password_changed: '%{email} 您好，您已成功修改账户密码，若非本人操作，您的账户可能存在被盗风险，请立即联系客服！【貔貅交易所（北京）】'
-    deposit_done: '%{email} 您好，您于%{time}进行了（%{currency}）充值操作，金额为%{amount}。最新余额为：%{balance}。（若非本人操作，请及时联系我们！）【貔貅交易所（北京）】'
-    withdraw_done: '%{email} 您好，您于%{time}进行了（%{currency}）提现操作，金额为%{amount}。最新余额为：%{balance}。（若非本人操作，请立即联系客服！）【貔貅交易所（北京）】'
+    verification_code: '验证码为：%{code}，30分钟内有效。（提示：工作人员不会索要，切勿泄露！）【PEATIO】'
+    password_changed: '%{email} 您好，您已成功修改账户密码，若非本人操作，您的账户可能存在被盗风险，请立即联系客服！【PEATIO】'
+    deposit_done: '%{email} 您好，您于%{time}进行了（%{currency}）充值操作，金额为%{amount}。最新余额为：%{balance}。（若非本人操作，请及时联系我们！）【PEATIO】'
+    withdraw_done: '%{email} 您好，您于%{time}进行了（%{currency}）提现操作，金额为%{amount}。最新余额为：%{balance}。（若非本人操作，请立即联系客服！）【PEATIO】'
   header:
     home: 首页
     dashboard: 控制面板
@@ -1631,13 +1644,13 @@ zh-CN:
     emails:
       new:
         title: 设置邮箱
-        setup_email: 请设置你的邮箱, 否则将无法进行任何操作。
-        warning: 设置邮件后, 请查收你的收件箱并进行激活
+        setup_email: 请设置您的邮箱, 否则将无法进行任何操作。
+        warning: 设置邮件后, 请查收您的收件箱并进行激活
         email_address: 邮箱地址
         save: 保存
     weibo:
       destroy:
-        last_auth_alert: 亲, 微博是你最后一种登录方式了, 解除了就没法登录了
+        last_auth_alert: 亲, 微博是您最后一种登录方式了, 解除了就没法登录了
         unbind_success: 已经解除微博绑定
     identities:
       new:
@@ -1784,7 +1797,7 @@ zh-CN:
     sms_auths:
       show:
         title: 绑定手机号码
-        description: 绑定手机号码，让你在貔貅交易所的资金更安全，还可以快速找回密码，并即时收到您在网站操作的动态提醒和监控账号安全。
+        description: 绑定手机号码，让您的资金更安全，还可以快速找回密码，并即时收到您在网站操作的动态提醒和监控账号安全。
         warning: 手机未绑定时，您将无法在网站操作提现以及账户密码找回。
         phone_number: 请输入手机号码
         send_code: 获取验证码
@@ -1809,7 +1822,7 @@ zh-CN:
     satoshi:
       key: 块链
       title: 比特币提现
-      intro: 将你在貔貅的比特币余额提取到你的钱包账户
+      intro: 将您在貔貅的比特币余额提取到您的钱包账户
       latency: 30 分钟到账
       transfer: 人工处理
       go: 立即提现
