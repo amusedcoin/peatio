@@ -1,23 +1,107 @@
-header.text-center
-  .ribbon
-    a href="https://github.com/peatio/peatio" View on GitHub
-  .container
-    a href='http://github.com/peatio/peatio'
-      img src='#{image_path 'logo.png'}' width='336px'
-    section
-      - Rails.configuration.i18n.available_locales.each do |locale|
-        h3 = t(:slogan, locale: locale)
-    #getstart.row
-      - unless current_user
-        .col-xs-4.col-xs-offset-8
-          a href="#{signin_path}" class="btn btn-primary btn-lg btn-block" role="button" = t("header.signin")
-        - if ENV['WEIBO_AUTH'] == "true"
-          .col-xs-4
-            a href="/auth/weibo" class="btn btn-primary btn-lg btn-block" role="button" = t("header.login_via_weibo")
-        .col-xs-4
-          a href="#{signup_path}" class="btn btn-primary btn-lg btn-block" role="button" = t("header.signup")
-      - else
-        .col-xs-6.col-xs-offset-9.text-center
-          a href="#{market_path(current_market)}" class="btn btn-primary btn-lg btn-block" role="button" = t("header.getstart")
-          a href="#{funds_path}" class="btn btn-primary btn-lg btn-block" role="button" = t("header.funds")
-          a href="#{settings_path}" class="btn btn-primary btn-lg btn-block" role="button" = t("header.settings")
+#ticker.container
+  table.table
+    tr.ticker
+      td
+        i.fa.fa-bar-chart-o
+      th BTC/AUD
+      th = t 'global.latest_price'
+      td.value.last
+      th = t 'global.bid_price'
+      td.value.buy
+      th = t 'global.ask_price'
+      td.value.sell
+      th = t 'global.high_price'
+      td.value.high
+      th = t 'global.low_price'
+      td.value.low
+      th = t 'global.volume'
+      td.value.volume
+
+
+#main
+  .row style="margin: 40px 0;"
+    .col-sm-7
+      = image_tag 'logo.png'
+    .col-sm-5: .login_form
+      = simple_form_for Identity.new, url: '/auth/identity/callback', method: :post do |f|
+        /= f.input :email, :input_html => {:name => 'auth_key', :autofocus => 'true'}, label: t('simple_form.labels.session.email'), placeholder: t('simple_form.placeholders.session.email')
+        = f.input :password, :as => 'password', :input_html => {:name => 'password'}, label: t('simple_form.labels.session.password'), placeholder: t('simple_form.placeholders.session.password'), hint: ''
+        = f.button :wrapped, t('header.signin')
+      p.text-center
+        span = link_to t('.forget_pasword'), new_reset_password_path
+      p.text-center
+        span = t('.dont_have_account')
+        == "&nbsp;"
+        span = link_to t('.signup'), signup_path
+
+  .row
+    .col-sm-4
+      .panel.panel-primary
+        .panel-heading
+          h3
+            i.fa.fa-fw.fa-gavel.pull-left
+            = t('.market')
+        .panel-body.feature1
+          p = t('.trading_fee')
+          p = t('.trade_time')
+    .col-sm-4
+      .panel.panel-primary
+        .panel-heading
+          h3
+            i.fa.fa-fw.fa-lightbulb-o.pull-left
+            = t('.technology')
+        .panel-body.feature1
+          p = t('.opensource')
+          p = t('.api_support')
+    .col-sm-4
+      .panel.panel-primary
+        .panel-heading
+          h3
+            i.fa.fa-fw.fa-money.pull-left
+            = t('.transparency')
+        .panel-body.feature1
+          p = t('.reserves')
+          p = t('.publicly_auditable')
+
+  .row
+    .col-sm-3
+      .panel.panel-default
+        .panel-heading
+          h3
+            i.fa.fa-fw.fa-rocket.pull-left
+            = t('.efficiency')
+        .panel-body.small.feature2
+          p = t('.instant_trades')
+          p = t('.high_speed_engines')
+          p = t('.instant_bitcoin_transfers')
+    .col-sm-3
+      .panel.panel-default
+        .panel-heading
+          h3
+            i.fa.fa-fw.fa-thumbs-o-up.pull-left
+            = t('.safety')
+        .panel-body.small.feature2
+          p = t('.insured_cloud_storage')
+          p = t('.sms_verification')
+          p = t('.two_factor_auth')
+    .col-sm-3
+      .panel.panel-default
+        .panel-heading
+          h3
+            i.fa.fa-fw.fa-credit-card.pull-left
+            = t('.fees')
+        .panel-body.small.feature2
+          p = t('.trading_fee')
+          p = t('.deposit_fee')
+          p = t('.withdraw_fee')
+
+    .col-sm-3
+      .panel.panel-default
+        .panel-heading
+          h3
+            i.fa.fa-fw.fa-users.pull-left
+            = t('.service')
+        .panel-body.small.feature2
+          p = t('.professional_service')
+          p = t('.responsive_support')
+          p = t('.workding_time')
